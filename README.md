@@ -1,3 +1,12 @@
+- 搭建环境
+- 基本安装 npx create-react-app project
+- 安装路由 npm i -S react-router react-router-dom
+- 配置支持 less
+  - 安装 npm i -S less less-load
+  - 或者 npm install less less-loader
+  - 运行 npm run eject, 暴露配置文件 (选择这种形式)
+  - 配置 craco 库，craco-less
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
