@@ -2,19 +2,10 @@
 - 基本安装 npx create-react-app project
 - 安装路由 npm i -S react-router react-router-dom
 - 配置支持 less
-
   - 安装 npm i -S less less-loader
   - 或者 npm install less less-loader
   - 运行 npm run eject, 暴露配置文件 (选择这种形式)
-    - 出现 script 和 config 文件夹，说明成功了
-    - 打开 config/webpack.config.js，搜索 sass
-    - 复制
-      const sassRegex = /\.(scss|sass)$/;
-      const sassModuleRegex = /\.module\.(scss|sass)$/;
-      把 sass 都改成 less
-    - 再复制 sassRegex 和 sassModuleRegex, 把 sass 修改成 less （5 个）
   - 配置 craco 库，craco-less
-
 - redux: npm i -S redux react-redux
 - 轮播图组件：
   https://react-swipeable-views.com/demos/demos/
@@ -28,7 +19,25 @@
 - 一次可以运行多条 npm Scripts 命令的模块 -- concurrently
   - npm i -S nodemon concurrently
 - 下载字体图标 iconfont
+
   - 个人/定位/下拉箭头/搜索放大镜/购物车/首页/商城/服务/我的/星星/返回键
+
+- npm run eject
+  - 出现 script 和 config 文件夹，说明成功了
+  - 打开 config/webpack.config.js，搜索 sass
+  - 复制
+    const sassRegex = /\.(scss|sass)$/;
+    const sassModuleRegex = /\.module\.(scss|sass)$/;
+    把 sass 都改成 less
+  - 再复制 sassRegex 和 sassModuleRegex, 把 sass 修改成 less （5 个）
+- css 初始化
+  - reset.css
+  - 加载 reset.css, 在 index.js 入口文件中添加
+    - import './static/css/reset.css'
+- 加载字体图标
+  - 把字体图标文件放在 css 文件夹的 font 文件夹下
+  - 加载字体图标，在 index.js 中加载
+    - import './static/css/font/iconfont.css'
 
 # Getting Started with Create React App
 
