@@ -2,10 +2,19 @@
 - 基本安装 npx create-react-app project
 - 安装路由 npm i -S react-router react-router-dom
 - 配置支持 less
-  - 安装 npm i -S less less-load
+
+  - 安装 npm i -S less less-loader
   - 或者 npm install less less-loader
   - 运行 npm run eject, 暴露配置文件 (选择这种形式)
+    - 出现 script 和 config 文件夹，说明成功了
+    - 打开 config/webpack.config.js，搜索 sass
+    - 复制
+      const sassRegex = /\.(scss|sass)$/;
+      const sassModuleRegex = /\.module\.(scss|sass)$/;
+      把 sass 都改成 less
+    - 再复制 sassRegex 和 sassModuleRegex, 把 sass 修改成 less （5 个）
   - 配置 craco 库，craco-less
+
 - redux: npm i -S redux react-redux
 - 轮播图组件：
   https://react-swipeable-views.com/demos/demos/
