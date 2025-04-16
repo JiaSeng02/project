@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./App.less";
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="box">
         Hello
         <ul>
           <li>1</li>
@@ -13,6 +14,7 @@ export default class App extends Component {
           <li>5</li>
         </ul>
         <i className="iconfont icon-index"></i>
+        <div className="con"></div>
       </div>
     );
   }

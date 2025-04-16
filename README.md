@@ -38,6 +38,26 @@
   - 把字体图标文件放在 css 文件夹的 font 文件夹下
   - 加载字体图标，在 index.js 中加载
     - import './static/css/font/iconfont.css'
+- 配置支持 rem
+  - 需要创建一段 js，动态的计算当前视角下 html 的 font-size
+  - 放在 html 文件中 (public/index.html)
+  - (function (doc, win) {
+    var docEl = doc.documentElement,
+    resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+    recalc = function () {
+    var clientWidth = docEl.clientWidth;
+    if (!clientWidth) return;
+    if (clientWidth >= 750) {
+    docEl.style.fontSize = '100px';
+    } else {
+    docEl.style.fontSize = 100 \* (clientWidth / 750) + 'px';
+    }
+    };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+  - 把 reset.css 中添加 html: {font.size: 100px}
 
 # Getting Started with Create React App
 
