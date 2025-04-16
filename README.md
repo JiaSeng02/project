@@ -6,6 +6,20 @@
   - 或者 npm install less less-loader
   - 运行 npm run eject, 暴露配置文件 (选择这种形式)
   - 配置 craco 库，craco-less
+- redux: npm i -S redux react-redux
+- 轮播图组件：
+  https://react-swipeable-views.com/demos/demos/
+  npm install --save react-swipeable-views
+- 自己搭建后台：
+- 安装 npm i -S express
+- 解决跨域： 安装中间件 http-proxy-middleware
+  npm i -S http-proxy-middleware
+- 后台文件发生改变时能自动重启后台的一个模块 nodemon
+  - npm install -g nodemon (Install it globally in C drive)
+- 一次可以运行多条 npm Scripts 命令的模块 -- concurrently
+  - npm i -S nodemon concurrently
+- 下载字体图标 iconfont
+  - 个人/定位/下拉箭头/搜索放大镜/购物车/首页/商城/服务/我的/星星/返回键
 
 # Getting Started with Create React App
 
